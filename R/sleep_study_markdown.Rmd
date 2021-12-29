@@ -31,13 +31,13 @@ library(ggpubr)
 sleep_data <- read_csv(file = "../Data/sleep_data.csv")
 ```
 
+
 ``` {r adding columns, inlcude = FALSE, message=FALSE, echo=FALSE}
 sleep_data <- sleep_data %>%
   add_column(sleep_month = months(sleep_data$sleep_date))
 sleep_data <- sleep_data %>%
   add_column(sleep_quarter = quarters(sleep_data$sleep_date))
 ```
-
 
 
 ```{r long form data, inlcude=FALSE, message=FALSE, echo=FALSE}
